@@ -1,4 +1,4 @@
-package utilities;
+package cydeo.utilities;
 
 import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.*;

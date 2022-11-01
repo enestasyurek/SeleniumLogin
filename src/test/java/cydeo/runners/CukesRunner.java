@@ -13,9 +13,9 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
         features = "src/test/resources/features",
-        glue = "step_definitions",
+        glue = "cydeo/step_definitions",
         dryRun = false,
-        tags = "@newtest",
+        tags = "@warning",
         publish = false
 
 )

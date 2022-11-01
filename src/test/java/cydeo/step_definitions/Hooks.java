@@ -1,4 +1,4 @@
-package step_definitions;
+package cydeo.step_definitions;
 
 /*
 In the class we will be able to pass pre- & post- conditions to
@@ -7,9 +7,10 @@ In the class we will be able to pass pre- & post- conditions to
 
 import io.cucumber.java.*;
 import org.openqa.selenium.*;
-import utilities.*;
+import cydeo.utilities.*;
 
 public class Hooks {
+
 
     //import from io.cucumber.java not from junit
 //    @Before (order = 1)

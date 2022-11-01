@@ -1,4 +1,4 @@
-package utilities;
+package cydeo.utilities;
 
 import org.junit.*;
 import org.openqa.selenium.NoSuchElementException;
