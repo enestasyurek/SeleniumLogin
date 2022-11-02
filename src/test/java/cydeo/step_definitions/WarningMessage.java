@@ -16,6 +16,7 @@ public class WarningMessage {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
     @When("the user enters invalid {string} and {string}")
+
     public void the_user_enters_invalid_and(String userName, String passWord) {
         loginPage.login(userName,passWord);
     }

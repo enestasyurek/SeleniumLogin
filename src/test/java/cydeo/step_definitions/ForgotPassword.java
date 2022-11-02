@@ -18,11 +18,13 @@ public class ForgotPassword {
     @When("I click the forgot password link")
     public void i_click_the_forgot_password_link() {
         loginPage.forgotPassword.click();
+        System.out.println("Clicked on forgot password link");
 
     }
     @Then("I should be on the forgot password page")
     public void i_should_be_on_the_forgot_password_page() {
         Assert.assertEquals("Forgot Password", Driver.getDriver().getTitle());
         System.out.println(Driver.getDriver().getTitle());
+
     }
 }

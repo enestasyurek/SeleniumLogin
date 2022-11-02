@@ -13,6 +13,7 @@ public class Hooks {
 
 
 
+
     //import from io.cucumber.java not from junit
 //    @Before (order = 1)
     public void setupScenario(){
@@ -37,10 +38,8 @@ public class Hooks {
 
 
         if (scenario.isFailed()){
-
             byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
         }
 
 
@@ -51,7 +50,7 @@ public class Hooks {
         //System.out.println("====Scenario ended/ Take screenshot if failed!");
     }
 
-    // @BeforeStep
+    // @nalmeforeStep
     public void setupStep(){
         System.out.println("--------> applying setup using @BeforeStep");
     }
