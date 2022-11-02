@@ -7,8 +7,7 @@ Feature: Warning Messages, While logging in
 
 
   Scenario Outline:  User enters invalid username and password
-    When the user enters invalid <username>
-    And enters invalid <password>
+    When the user enters invalid <username> and <password>
     Then the user should see "Invalid username or password." message
 
     Examples:
@@ -17,3 +16,6 @@ Feature: Warning Messages, While logging in
       | "admin"    | "test"   |
       | "dasda"    | "admin"  |
       | "smanager" | "user"   |
+
+
+    

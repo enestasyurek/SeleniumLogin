@@ -21,4 +21,15 @@ public class LoginPage {
 
     @FindBy(css = "[class='alert alert-error']")
     public WebElement warningMessage;
+
+    
+
+    @FindBy(xpath = "//a[.='Forgot your password?']")
+    public WebElement forgotPassword;
+
+    public void login(String username, String password){
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
 }
