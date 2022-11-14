@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import cydeo.utilities.Driver;
 
 public class LoginPage {
+
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -22,14 +23,20 @@ public class LoginPage {
     @FindBy(css = "[class='alert alert-error']")
     public WebElement warningMessage;
 
-    
-
     @FindBy(xpath = "//a[.='Forgot your password?']")
     public WebElement forgotPassword;
 
+    @FindBy(xpath = "//span[.='Remember me on this computer']")
+    public WebElement rememberMe;
+
+    public String warningMessage(){
+        return usernameInput.getAttribute("validationMessage");
+    }
     public void login(String username, String password){
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
-        loginBtn.click();
+    }
+    public void login(String username){
+        usernameInput.sendKeys(username);
     }
 }

@@ -15,16 +15,25 @@ public class WarningMessage {
     public void the_user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
     @When("the user enters invalid {string} and {string}")
 
     public void the_user_enters_invalid_and(String userName, String passWord) {
-        loginPage.login(userName,passWord);
+        loginPage.login(userName, passWord);
     }
+
     @Then("the user should see {string} message")
     public void the_user_should_see_message(String expectedMessage) {
         Assert.assertEquals("Invalid username or password.", expectedMessage);
     }
 
+    @When("the user enters blank username")
+    public void theUserEntersBlankUsername() {
+        loginPage.usernameInput.sendKeys("");
+    }
 
-
+    @Then("the user should see warning message")
+    public void theUserShouldSeeWarningMessage() {
+        Assert.assertEquals("Please fill out this field.", loginPage.warningMessage);
+    }
 }

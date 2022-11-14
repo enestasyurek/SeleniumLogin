@@ -17,5 +17,6 @@ Feature: Warning Messages, While logging in
       | "dasda"    | "admin"  |
       | "smanager" | "user"   |
 
-
-    
+    Scenario: User enters blank username
+      When the user enters blank username
+      Then the user should see warning message
